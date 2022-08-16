@@ -1,0 +1,44 @@
+1---
+noted pad ++ and sqllitestedio install
+▶ https://sqlitestudio.pl/
+comment  ▶--
+Tools -->configuraations -->look >font -->font 16 fira
+ctrl + o  --> open
+Alt+E ---> paper command 
+select data base then type command in comman paaper(alt+e)-->f9[un]
+deafult view query view window  and grid view window
+the sql statement terminate with simi colon; with clause  and some clause have logical expression
+CRUD  create read update delete
+
+2---db organize
+primary key simple means a column that is used the unique key for this table 
+▶SELECT 'hello world' AS Result ✔use literal string as data source
+▶SELECT * FROM country ORDER BY Name ✅show all table by order name
+▶SELECT Name ,Region FROM country ORDER BY Name
+▶SELECT Name ,Region AS "Area" FROM country ORDER BY Name; change name column ✔"[double qoute] is identifier im say alias name 
+single quote for  literal string
+
+3--best practise capital case 
+▶SELECT Name,Continent,Region From country;
+4---select row
+▶SELECT Name,Continent,Region From country where continent='Europe';
+▶SELECT Name,Continent,Region From country where continent='Europe' order by name limit 5;
+▶SELECT Name,Continent,Region From country where continent='Europe' order by name limit 5 offset 15 --from 15th to after
+5---select coulumn
+▶select name as country ,continent,region from country
+6--- counting rows
+▶select count(*) from country --239
+▶select count(*) from country where population>1000000;
+▶select count(*) from country where population>100000000 and continent='Europe'
+▶select count(LifeExpectancy) from country;
+7---inserting data
+▶insert into customer (name,address,city,state,zip)
+    values('scarlett johansson','127 clob way','bedrock','ca','235665');
+▶insert into customer (name,city,state)
+    values('emila clarcke','hiden park','london');   -- null rest col
+8---updating data
+▶update customer set address='new hamshire ',zip='3682739' where id =6;
+▶update customer set address='206 w  hamshire ',zip='3687739' where id =6;
+▶update customer set address=null,zip=null where id =6; -- set again null as value ~  unset
+9---deleting data
+▶delete from customer where id =6; --delete record
